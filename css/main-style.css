@@ -1,0 +1,135 @@
+/* Root Colors */
+:root{
+    --primary-color: #5A1B02;
+    --secondary-color: #EEBA0B;
+    --dark-color: #2C1604;
+    --white-color: #f8f7f1;
+}
+
+/* font styling */
+h1, h2, h3{
+    color: var(--secondary-color);
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+
+h1, .app-name {
+    font-size: 2.5em;
+}
+
+h4 {
+    color: var(--dark-color);
+    font-family: 'Gideon Roman', cursive;
+}
+
+p {
+    font-family: 'Gideon Roman', cursive;
+}
+
+/* a tag styling */
+a {
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--dark-color);
+}
+
+/* button styling */
+.btn {
+    color: var(--secondary-color);
+    outline: var(--dark-color);
+}
+
+.btn:hover {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+}
+
+/* navbar Styling having to overide bootstrap */
+nav { 
+    background-color: var(--dark-color);
+}
+
+nav img {
+    width: 30px;
+    height: 28px;
+}
+
+/* body styling */
+body {
+    color: var(--dark-color);
+}
+
+/* Container styling */
+main>.container {
+    padding: 60px 15px 0;
+    margin-bottom: 5rem;
+}
+
+/* Main Body Styling */
+
+.app-logo img {
+    width: 600px;
+    height: 350px;
+}
+
+.inBolden {
+    font-weight: bold;
+}
+
+/* Tech Icons styling */
+#html-icon {
+    color: #FF5733;
+}
+
+#css-icon {
+    color: #2965f1;
+}
+
+#js-icon {
+    color: #f0db4f;
+}
+
+#bootstrap-icon {
+    color: #563d7c;
+}
+
+.fa-check-square {
+    color: var(--secondary-color);
+}
+
+
+/* Prism custom JS */
+code[class*="language-"], pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* footer styling */
+.sticky-footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+}
+
+footer, img {
+    width: 180px;
+}
+
+footer .social>a {
+    color: var(--white-color);
+    opacity: 0.7;
+}
+
+footer .social>a:hover {
+    color: var(--secondary-color);
+    opacity: 0.9;
+}
+
