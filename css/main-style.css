@@ -51,7 +51,7 @@ a:hover {
 /* button styling */
 .btn {
     color: var(--secondary-color);
-    outline: var(--dark-color);
+    background-color: var(--dark-color);
 }
 
 .btn:hover {
@@ -131,6 +131,18 @@ main>.container {
 
 .fa-check-square {
     color: var(--secondary-color);
+}
+
+table {
+    background-color: white;
+}
+
+.fizzy {
+    color: var(--dark-color);
+}
+
+.buzz {
+    color: var(--pink-color);
 }
 
 
