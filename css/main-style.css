@@ -133,16 +133,27 @@ main>.container {
     color: var(--secondary-color);
 }
 
+
+/* Table Styling */
 table {
     background-color: white;
 }
 
-.fizzy {
+.Fizzy {
     color: var(--dark-color);
 }
 
-.buzz {
+.Buzz {
     color: var(--pink-color);
+}
+
+.FizzyBuzz {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.lead {
+    font-size: 1em;
 }
 
 
