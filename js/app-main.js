@@ -29,7 +29,7 @@ function getValues() {
     if (Number.isInteger(fizzyValue) && Number.isInteger(buzzValue)) {
 
         // 4. Loop through the iputs and Run this control flow coditions:
-        let fbArray = fuzzybuzz(fizzyValue, buzzValue);
+        let fbArray = fuzzybuzzC(fizzyValue, buzzValue);
 
         // 5. Display to the screen. 
         displayfb(fbArray);
@@ -42,6 +42,8 @@ function getValues() {
 
 
 // Logic function - loop through the number range
+
+// Logic using If Statments 
 function fuzzybuzz(fizzyValue, buzzValue) {
 
     // Arry of numbers 
@@ -50,7 +52,6 @@ function fuzzybuzz(fizzyValue, buzzValue) {
     // Looping through the numbers 
     for (let i = 1; i <= 100; i++) {
 
-        // Print “FizzBuzz” if an integer is divisible by both 3 and 5.
         if (i % fizzyValue == 0 && i % buzzValue == 0) {
             returnArray.push('FizzyBuzz');
         } else if (i % fizzyValue == 0) {
@@ -60,6 +61,59 @@ function fuzzybuzz(fizzyValue, buzzValue) {
         }
         // Pushing to the numbers to numberValues
         returnArray.push(i);
+    }
+    return returnArray;
+}
+
+// Logic using Switch Statments 
+function fuzzybuzzB(fizzyValue, buzzValue) {
+
+    // Arry of numbers 
+    let returnArray = [];
+    let fizzy = false;
+    let buzz = false;
+
+    // Looping through the numbers 
+    for (let i = 1; i <= 100; i++) {
+
+        // New Code Using Switch statments
+        fizzy = i % fizzyValue == 0;
+        buzz = i % buzzValue == 0;
+
+        switch (true) {
+            case fizzy && buzz: {
+                returnArray.push("FizzyBuzz");
+                break;
+            }
+            case fizzy: {
+                returnArray.push("Fizzy");
+                break;
+            }
+            case buzz: {
+                returnArray.push("Buzz");
+                break;
+            }
+            default: {
+                // Pushing to the numbers to numberValues
+                returnArray.push(i);
+                break;
+            }
+        }
+    }
+    return returnArray;
+}
+
+// Logic using ternary operator - best algorithm
+function fuzzybuzzC(fizzyValue, buzzValue) {
+
+    // Arry of numbers 
+    let returnArray = [];
+
+    // Looping through the numbers 
+    for (let i = 1; i <= 100; i++) {
+
+        let value = ((i % fizzyValue == 0 ? "Fizzy" : '') + (i % buzzValue == 0 ? "Buzz" : '') || i);
+        returnArray.push(value);
     }
     return returnArray;
 }
